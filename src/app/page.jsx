@@ -1,15 +1,11 @@
- "use client"
- 
-import styled from "styled-components";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 export default function Home() {
     return (
-        <div>
-            <Header>Home</Header>
-        </div>
+        <>
+            <Header />
+            <Footer />
+        </>
     );
 }
-
-const Header =  styled.h1`
-    color: red;
-`
