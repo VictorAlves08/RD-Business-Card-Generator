@@ -66,7 +66,7 @@ export default function Home() {
             </HeaderSection>
 
             <ContentSection colors={colors}>
-                <Image src={Landing} alt="Logo Resultados Digitais" width={400} />
+                <Image priority src={Landing} alt="Imagem de um homem pintor, trabalhando no cartão de visita" width={400} />
 
                 {step === formSteps.FORM && (
                     <FormContent
