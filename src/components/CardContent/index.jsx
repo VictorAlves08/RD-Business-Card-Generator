@@ -1,15 +1,19 @@
 "use client"
 import React from "react";
+import styled from 'styled-components';
+import Image from "next/image.js";
+
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { IoIosArrowBack, IoIosArrowRoundDown } from "react-icons/io";
+
 import colors from "../../styles/colors.js";
 import typography from "../../styles/typography.js";
-import { IoIosArrowBack } from "react-icons/io";
-import styled from 'styled-components';
+
 import Button from "@/components/Button";
 import Text from "@/components/Text";
-import Image from "next/image.js";
+
 import { signUpLink } from "@/utils/constants.js";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import { IoIosArrowRoundDown } from "react-icons/io";
+
 import LogoNoName from '../../../public/logo_no_name.svg';
 
 export default function CardContent({

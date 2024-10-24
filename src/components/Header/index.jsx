@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 
 import Image from 'next/image'
@@ -7,7 +8,7 @@ import Text from "@/components/Text";
 
 import colors from "../../styles/colors.js";
 import typography from "../../styles/typography.js";
-import { Container } from "./styles";
+import styled from 'styled-components';
 
 export default function Header() {
     return (
@@ -26,3 +27,14 @@ export default function Header() {
         </Container>
     )
 }
+
+const Container = styled.header`
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 1.25rem 2rem;
+`;

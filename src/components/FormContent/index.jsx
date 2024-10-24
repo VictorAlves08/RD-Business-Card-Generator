@@ -1,13 +1,17 @@
 "use client"
 import React, { useState } from "react";
+
 import Text from "@/components/Text";
 import Input from "@/components/Input";
 import Button from "@/components/Button";
+
 import colors from "../../styles/colors.js";
 import typography from "../../styles/typography.js";
-import styled from 'styled-components';
+
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { validateName, validateEmail, validatePhone } from '../../utils/checkInputs.js';
+
+import styled from 'styled-components';
 
 export default function FormContent({
     dataUser,
