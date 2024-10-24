@@ -1,15 +1,15 @@
 const typography = {
     font: {
-        primary: "Nunito Sans, sans-serif",
-        secondary: "Darker Grotesque, sans-serif"
+        primary: 'Nunito Sans, sans-serif',
+        secondary: 'Darker Grotesque, sans-serif'
     },
     size: {
-        xs: '0.75rem',
-        sm: '0.875rem',
-        md: '1rem',
-        lg: '1.25rem',
-        xl: '1.5rem',
-        xxl: '2rem'
+        xs: '0.75rem', // 12px
+        sm: '0.875rem', // 14px
+        md: '1rem', // 16px
+        lg: '1.25rem', // 20px
+        xl: '1.5rem', // 24px
+        xxl: '2rem' // 32px
     },
     weight: {
         thin: 200,

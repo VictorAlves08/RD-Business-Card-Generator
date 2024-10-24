@@ -9,7 +9,10 @@ const colors = {
     gray: '#97A1AC',
     grayLight: '#CFD3D8',
     background: '#F1F3F5',
-    white: '#FFFFFF'
+    white: '#FFFFFF',
+    deepPurple: '#6C5AE0',
+    lightPurple: '#806EFF',
+    yellowLight: '#feff7b',
 };
 
 export default colors;
