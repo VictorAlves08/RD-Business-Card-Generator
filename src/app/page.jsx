@@ -66,7 +66,7 @@ export default function Home() {
                 )}
             </HeaderSection>
 
-            <ContentSection colors={colors}>
+            <ContentSection isCardContent={step === formSteps.CARD} colors={colors}>
                 <Image className="content-image" priority src={Landing} alt="Imagem de um homem pintor, trabalhando no cartão de visita" />
 
                 {step === formSteps.FORM && (
@@ -141,6 +141,7 @@ const ContentSection = styled.section`
     .content-image{
         width: 400px;
         @media ${device.mobileL} {
+            display: ${({ isCardContent }) => isCardContent ? 'none' : 'block'};
             width: 300px;
         } 
     }

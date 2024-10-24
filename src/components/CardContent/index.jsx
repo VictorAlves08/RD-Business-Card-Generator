@@ -34,9 +34,9 @@ export default function CardContent({
             </SimpleButton>
             <Card>
                 <Image
+                    className="card-image"
                     src={LogoNoName}
                     alt="Logo Resultados Digitais"
-                    width={80}
                 />
                 <hr color={colors.grayLight} width="5" size="100" />
                 <div className="info-container">
@@ -97,6 +97,10 @@ export const Container = styled.section`
     
     gap: 0.8rem;
     padding: 1rem;
+
+    @media ${device.mobileL} {
+        max-width: 100%;
+    } 
 `
 
 const Card = styled.div`
@@ -112,6 +116,13 @@ const Card = styled.div`
     
     border-radius: 1.5rem;
     background-color: ${colors.white};
+
+    .card-image{
+        width: 80px;
+        @media ${device.mobileL} {
+            width: 50px;
+        } 
+    }
 
     .info-container{
         display: flex;
@@ -137,6 +148,10 @@ const ButtonContent = styled.span`
     align-items: center;
     justify-content: flex-start;
     gap: 0.5rem;
+
+    @media ${device.mobileL} {
+        font-size: ${typography.size.sm};
+    } 
 `;
 
 const ButtonGeneralContent = styled.span`
