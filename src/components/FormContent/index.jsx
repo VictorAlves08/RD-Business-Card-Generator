@@ -11,6 +11,7 @@ import typography from "../../styles/typography.js";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { validateName, validateEmail, validatePhone } from '../../utils/checkInputs.js';
 
+import { device } from "@/styles/breakpoints.js";
 import styled from 'styled-components';
 
 export default function FormContent({
@@ -133,11 +134,15 @@ export const Container = styled.form`
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
-
+    
     .input-group{
         display: flex;
         width: 100%;
         gap: 1.5rem;
+        
+        @media ${device.mobileL} {
+            flex-direction: column;
+        }
     }
 `
 
@@ -146,6 +151,10 @@ const InfoContainer = styled.section`
         color: ${colors.grayLight};
         font-size: ${typography.size.xs};
         font-weight: ${typography.weight.regular};
+    }
+
+    @media ${device.mobileL} {
+        padding: 0.8rem;
     }
 `
 

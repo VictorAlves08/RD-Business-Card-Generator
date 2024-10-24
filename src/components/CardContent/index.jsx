@@ -15,6 +15,7 @@ import Text from "@/components/Text";
 import { signUpLink } from "@/utils/constants.js";
 
 import LogoNoName from '../../../public/logo_no_name.svg';
+import { device } from "@/styles/breakpoints.js";
 
 export default function CardContent({
     dataUser,

@@ -9,6 +9,7 @@ import Text from "@/components/Text/index.jsx";
 import FormContent from "@/components/FormContent/index.jsx";
 
 import Landing from '../../public/landing.svg'
+import { device, size } from '../styles/breakpoints';
 
 import styled from 'styled-components';
 import { formSteps } from "@/utils/constants.js";
@@ -66,7 +67,7 @@ export default function Home() {
             </HeaderSection>
 
             <ContentSection colors={colors}>
-                <Image priority src={Landing} alt="Imagem de um homem pintor, trabalhando no cartão de visita" width={400} />
+                <Image className="content-image" priority src={Landing} alt="Imagem de um homem pintor, trabalhando no cartão de visita" />
 
                 {step === formSteps.FORM && (
                     <FormContent
@@ -92,12 +93,14 @@ export default function Home() {
 
 const Container = styled.main`
     width: 100%;
-    height: 88vh;
+    height: 100%;
+    max-width: ${size.laptopL};
+
     background: ${({ colors }) => `linear-gradient(90deg, ${colors.deepPurple}, ${colors.lightPurple})`};
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 `
 
 const HeaderSection = styled.section`
@@ -114,6 +117,14 @@ const HeaderSection = styled.section`
         color: ${({ colors }) => colors.white};
         font-size: ${({ typography }) => typography.size.xxl};
         font-weight: ${({ typography }) => typography.weight.bold};
+        text-align: center;
+    }
+
+    @media ${device.mobileL} {
+        max-width: 100%;
+        h1{
+            font-size: ${({ typography }) => typography.size.xl};
+        }
     }
 `
 
@@ -123,4 +134,14 @@ const ContentSection = styled.section`
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+
+    .content-image{
+        width: 400px;
+        @media ${device.mobileL} {
+            width: 300px;
+        } 
+    }
 `
